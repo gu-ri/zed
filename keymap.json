@@ -1,0 +1,60 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    // Escape from insert mode
+    "context": "Editor && vim_mode == insert",
+    "bindings": { "j k": "vim::NormalBefore" }
+  },
+  {
+    // General
+    "context": "VimControl",
+    "bindings": {
+      "space e e": "workspace::ToggleLeftDock",
+      "space e o": "workspace::ToggleRightDock",
+      "space f f": "file_finder::Toggle",
+      "space f w": "workspace::NewSearch", // Open project search
+      "space f o": "outline::Toggle",
+      "space f e": "editor::Rename",
+      "space t o": "workspace::NewFile",
+      "space t x": "pane::CloseActiveItem",
+      "space t r": "pane::ReopenClosedItem",
+      "space t n": "pane::ActivateNextItem",
+      "space t p": "pane::ActivatePreviousItem",
+      "space s v": "pane::SplitRight",
+      "space s h": "pane::SplitDown"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-k": "tab_switcher::CloseSelectedItem"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space": null,
+      "space space": "project_panel::Open",
+      "space e e": "workspace::ToggleLeftDock",
+      "space a": "project_panel::NewFile",
+      "space n": "project_panel::NewDirectory",
+      "space r": "project_panel::Rename",
+      "space d": "project_panel::Delete",
+      "space y": "project_panel::CopyRelativePath",
+      "space shift-y": "project_panel::CopyPath",
+      "space shift-h": "project_panel::CollapseAllEntries",
+      "space f": "project_panel::NewSearchInDirectory"
+    }
+  }
+]

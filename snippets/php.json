@@ -1,0 +1,17 @@
+{
+  "var_dump": {
+    "prefix": "var",
+    "body": ["var_dump($1);", "$0"],
+    "description": "var_dump()"
+  },
+  "echo for html": {
+    "prefix": "echo",
+    "body": ["<?= $1;?>", "$0"],
+    "description": "echo in php tag"
+  },
+  "PHPDoc": {
+    "prefix": "/**",
+    "body": ["/**", " * $0", " */"],
+    "description": "PHPDoc Comment."
+  }
+}
