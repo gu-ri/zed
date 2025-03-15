@@ -2,12 +2,28 @@
 //
 [
     {
-        "label": "git lol --follow",
-        "command": ""
+        "label": "git fetch",
+        "command": "git fetch",
+        "reveal": "no_focus",
+        "show_command": false
+    },
+    {
+        "label": "git pull",
+        "command": "git pull",
+        "reveal": "no_focus",
+        "show_command": false
     },
     {
         "label": "git lol",
         "command": "git lol",
+        "reveal_target": "center",
+        "hide": "always",
+        "show_command": false,
+        "show_summary": false
+    },
+    {
+        "label": "git lol --follow",
+        "command": "git lol --follow $ZED_FILE",
         "reveal_target": "center",
         "hide": "always",
         "show_command": false,
@@ -20,19 +36,8 @@
         "hide": "always",
         "show_command": false,
         "show_summary": false
-    },
-    {
-        "label": "git fetch",
-        "command": "git fetch",
-        "reveal": "no_focus",
-        "show_command": false
-    },
-    {
-        "label": "git pull",
-        "command": "git pull",
-        "reveal": "no_focus",
-        "show_command": false
-    } /*,
+    }
+    /*
     // Example:
     {
         "label": "Example task",
