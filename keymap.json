@@ -87,6 +87,7 @@
             "space": null,
             "space space": "menu::Confirm",
             "escape": "workspace::ToggleRightDock",
+            "space e o": "workspace::ToggleRightDock",
             "enter": "git::ToggleStaged",
             // git
             "space g b": "git::Switch",
