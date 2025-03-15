@@ -41,9 +41,13 @@
             "space shift-y": "workspace::CopyPath",
             "] c": ["workspace::SendKeystrokes", "] c z z"],
             "[ c": ["workspace::SendKeystrokes", "[ c z z"],
+            "] e": "editor::MoveToStartOfNextExcerpt",
+            "[ [ e": "editor::MoveToEndOfPreviousExcerpt",
+            "[ e": ["workspace::SendKeystrokes", "[ [ e cmd-up"],
             // git
             "space g b": "git::Switch",
             "space g d": "git::Diff",
+            "space g s": "git_panel::ToggleFocus",
             "space g a": "git::ToggleStaged",
             "space g r": "git::Restore",
             "space g shift-r": "git::RestoreFile",
@@ -63,8 +67,9 @@
     {
         "context": "ProjectPanel",
         "bindings": {
-            "space": null, // リーダーキーとして使用
-            "space space": "project_panel::Open", // spaceの代わり
+            "space": null,
+            "space space": "project_panel::Open",
+            "escape": "workspace::ToggleLeftDock",
             "space e e": "workspace::ToggleLeftDock",
             "space a": "project_panel::NewFile",
             "space n": "project_panel::NewDirectory",
@@ -79,8 +84,23 @@
     {
         "context": "GitPanel",
         "bindings": {
-            "space": "menu::Confirm",
-            "enter": "git::ToggleStaged"
+            "space": null,
+            "space space": "menu::Confirm",
+            "escape": "workspace::ToggleRightDock",
+            "enter": "git::ToggleStaged",
+            // git
+            "space g b": "git::Switch",
+            "space g d": "git::Diff",
+            "space g s": "git_panel::ToggleFocus",
+            "space g a": "git::ToggleStaged",
+            "space g r": "git::Restore",
+            "space g shift-r": "git::RestoreFile",
+            "space g f": ["task::Spawn", { "task_name": "git fetch" }],
+            "space g p": ["task::Spawn", { "task_name": "git pull" }],
+            "space g c": "git::Commit",
+            "space g l l": ["task::Spawn", { "task_name": "git lol" }],
+            "space g l p": ["task::Spawn", { "task_name": "git lol --follow" }],
+            "space g l f": ["task::Spawn", { "task_name": "git lof" }]
         }
     },
     {
