@@ -45,7 +45,8 @@
             "[ [ e": "editor::MoveToEndOfPreviousExcerpt",
             "[ e": ["workspace::SendKeystrokes", "[ [ e cmd-up"],
             // git
-            "space g b": "git::Switch",
+            "space b": "git::Switch", // (branch)
+            "space g b": "git::Blame",
             "space g d": "git::Diff",
             "space g s": "git_panel::ToggleFocus",
             "space g a": "git::ToggleStaged",
@@ -90,7 +91,8 @@
             "space e o": "workspace::ToggleRightDock",
             "enter": "git::ToggleStaged",
             // git
-            "space g b": "git::Switch",
+            "space b": "git::Switch", // (branch)
+            "space g b": "git::Blame",
             "space g d": "git::Diff",
             "space g s": "git_panel::ToggleFocus",
             "space g a": "git::ToggleStaged",
