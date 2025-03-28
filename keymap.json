@@ -55,7 +55,7 @@
             "space g p": ["task::Spawn", { "task_name": "git pull" }],
             "space g c": "git::Commit",
             "space g l l": ["task::Spawn", { "task_name": "git lol" }],
-            "space g l p": ["task::Spawn", { "task_name": "git lol --follow" }],
+            "space g l p": ["task::Spawn", { "task_name": "git log --follow" }],
             "space g l f": ["task::Spawn", { "task_name": "git lof" }]
         }
     },
@@ -100,7 +100,7 @@
             "space g p": ["task::Spawn", { "task_name": "git pull" }],
             "space g c": "git::Commit",
             "space g l l": ["task::Spawn", { "task_name": "git lol" }],
-            "space g l p": ["task::Spawn", { "task_name": "git lol --follow" }],
+            "space g l p": ["task::Spawn", { "task_name": "git log --follow" }],
             "space g l f": ["task::Spawn", { "task_name": "git lof" }]
         }
     },

@@ -22,8 +22,8 @@
         "show_summary": false
     },
     {
-        "label": "git lol --follow",
-        "command": "git lol --follow $ZED_FILE",
+        "label": "git log --follow",
+        "command": "git log --decorate --date=format:'%Y-%m-%d %H:%M' --pretty='%C(auto)%h %d %s %Cblue %ad %an' --follow $ZED_FILE",
         "reveal_target": "center",
         "hide": "always",
         "show_command": false,
