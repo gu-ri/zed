@@ -24,7 +24,6 @@
             "space e e": "workspace::ToggleLeftDock",
             "space e o": "workspace::ToggleRightDock",
             "space e f": "project_panel::ToggleFocus",
-            "space e g": "git_panel::ToggleFocus",
             "space f f": "file_finder::Toggle",
             "space f w": "workspace::NewSearch", // Open project search
             "space f o": "outline::Toggle",
@@ -45,19 +44,19 @@
             "[ [ e": "editor::MoveToEndOfPreviousExcerpt",
             "[ e": ["workspace::SendKeystrokes", "[ [ e cmd-up"],
             // git
-            "space b": "git::Switch", // (branch)
+            "space g s": "git::Switch",
             "space g b": "git::Blame",
             "space g d": "git::Diff",
-            "space g s": "git_panel::ToggleFocus",
+            "space g g": "git_panel::ToggleFocus",
             "space g a": "git::ToggleStaged",
             "space g r": "git::Restore",
             "space g shift-r": "git::RestoreFile",
             "space g f": ["task::Spawn", { "task_name": "git fetch" }],
             "space g p": ["task::Spawn", { "task_name": "git pull" }],
             "space g c": "git::Commit",
-            "space g l l": ["task::Spawn", { "task_name": "git lol" }],
+            "space g l l": ["task::Spawn", { "task_name": "git ll" }],
             "space g l p": ["task::Spawn", { "task_name": "git log --follow" }],
-            "space g l f": ["task::Spawn", { "task_name": "git lof" }]
+            "space g l f": ["task::Spawn", { "task_name": "git lf" }]
         }
     },
     {
@@ -70,8 +69,9 @@
         "bindings": {
             "space": null,
             "space space": "project_panel::Open",
-            "escape": "workspace::ToggleLeftDock",
+            "escape": "project_panel::ToggleFocus",
             "space e e": "workspace::ToggleLeftDock",
+            "space e f": "workspace::ToggleLeftDock",
             "space a": "project_panel::NewFile",
             "space n": "project_panel::NewDirectory",
             "space r": "project_panel::Rename",
@@ -87,14 +87,15 @@
         "bindings": {
             "space": null,
             "space space": "menu::Confirm",
-            "escape": "workspace::ToggleRightDock",
+            "space g g": "workspace::ToggleRightDock",
             "space e o": "workspace::ToggleRightDock",
             "enter": "git::ToggleStaged",
+            "g space": "menu::SecondaryConfirm",
             // git
-            "space b": "git::Switch", // (branch)
+            "space g s": "git::Switch",
             "space g b": "git::Blame",
             "space g d": "git::Diff",
-            "space g s": "git_panel::ToggleFocus",
+            "escape": "git_panel::ToggleFocus",
             "space g a": "git::ToggleStaged",
             "space g r": "git::Restore",
             "space g shift-r": "git::RestoreFile",

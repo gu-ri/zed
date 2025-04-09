@@ -14,26 +14,27 @@
         "show_command": false
     },
     {
-        "label": "git lol",
-        "command": "git lol",
+        "label": "git ll",
+        "command": "git ll",
         "reveal_target": "center",
-        "hide": "always",
-        "show_command": false,
-        "show_summary": false
+        "show_command": false
     },
     {
         "label": "git log --follow",
         "command": "git log --decorate --date=format:'%Y-%m-%d %H:%M' --pretty='%C(auto)%h %d %s %Cblue %ad %an' --follow $ZED_FILE",
         "reveal_target": "center",
-        "hide": "always",
-        "show_command": false,
-        "show_summary": false
+        "show_command": false
     },
     {
-        "label": "git lof",
-        "command": "git lof",
+        "label": "git lf",
+        "command": "git lf",
         "reveal_target": "center",
-        "hide": "always",
+        "show_command": false
+    },
+    {
+        "label": "git copy current branch name",
+        "command": "git rev-parse --abbrev-ref HEAD | pbcopy",
+        "reveal": "never",
         "show_command": false,
         "show_summary": false
     }
