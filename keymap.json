@@ -79,7 +79,9 @@
             "space y": "workspace::CopyRelativePath",
             "space shift-y": "workspace::CopyPath",
             "space shift-h": "project_panel::CollapseAllEntries",
-            "space f": "project_panel::NewSearchInDirectory"
+            "space f": "project_panel::NewSearchInDirectory",
+            "space c": "project_panel::Copy",
+            "space p": "project_panel::Paste"
         }
     },
     {
