@@ -23,7 +23,7 @@
         "bindings": {
             "space e e": "workspace::ToggleLeftDock",
             "space e o": "workspace::ToggleRightDock",
-            "space e f": "project_panel::ToggleFocus",
+            "space e f": "pane::RevealInProjectPanel",
             "space f f": "file_finder::Toggle",
             "space f w": "workspace::NewSearch", // Open project search
             "space f o": "outline::Toggle",
