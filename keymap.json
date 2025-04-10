@@ -21,6 +21,7 @@
         // General
         "context": "VimControl",
         "bindings": {
+            "space l": "tab_switcher::Toggle",
             "space e e": "workspace::ToggleLeftDock",
             "space e o": "workspace::ToggleRightDock",
             "space e f": "pane::RevealInProjectPanel",
@@ -60,8 +61,11 @@
         }
     },
     {
+        "context": "TabSwitcher",
         "bindings": {
-            "ctrl-k": "tab_switcher::CloseSelectedItem"
+            "k": "menu::SelectPrevious",
+            "j": "menu::SelectNext",
+            "d": "tab_switcher::CloseSelectedItem"
         }
     },
     {
