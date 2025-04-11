@@ -44,6 +44,7 @@
             "] e": "editor::MoveToStartOfNextExcerpt",
             "[ [ e": "editor::MoveToEndOfPreviousExcerpt",
             "[ e": ["workspace::SendKeystrokes", "[ [ e cmd-up"],
+            "ctrl-g": "go_to_line::Toggle",
             // git
             "space g s": "git::Switch",
             "space g b": "git::Blame",
