@@ -45,6 +45,7 @@
             "[ [ e": "editor::MoveToEndOfPreviousExcerpt",
             "[ e": ["workspace::SendKeystrokes", "[ [ e cmd-up"],
             "ctrl-g": "go_to_line::Toggle",
+            "space n c": "workspace::ClearAllNotifications",
             // git
             "space g s": "git::Switch",
             "space g b": "git::Blame",
@@ -86,6 +87,7 @@
             "space shift-h": "project_panel::CollapseAllEntries",
             "space f": "project_panel::NewSearchInDirectory",
             "space c": "project_panel::Copy",
+            "space x": "project_panel::Cut",
             "space p": "project_panel::Paste"
         }
     },
