@@ -29,6 +29,7 @@
             "space f w": "workspace::NewSearch", // Open project search
             "space f o": "outline::Toggle",
             "space f e": "editor::Rename",
+            "space f s": "project_symbols::Toggle",
             "space t o": "workspace::NewFile",
             "space t x": "pane::CloseActiveItem",
             "space t r": "pane::ReopenClosedItem",
@@ -59,7 +60,8 @@
             "space g c": "git::Commit",
             "space g l l": ["task::Spawn", { "task_name": "git ll" }],
             "space g l p": ["task::Spawn", { "task_name": "git log --follow" }],
-            "space g l f": ["task::Spawn", { "task_name": "git lf" }]
+            "space g l f": ["task::Spawn", { "task_name": "git lf" }],
+            "space g o": "editor::OpenGitBlameCommit"
         }
     },
     {
