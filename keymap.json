@@ -21,7 +21,7 @@
         // General
         "context": "VimControl",
         "bindings": {
-            "space l": "tab_switcher::Toggle",
+            "space l": "tab_switcher::ToggleAll",
             "space e e": "workspace::ToggleLeftDock",
             "space e o": "workspace::ToggleRightDock",
             "space e f": "pane::RevealInProjectPanel",
@@ -67,9 +67,7 @@
     {
         "context": "TabSwitcher",
         "bindings": {
-            "k": "menu::SelectPrevious",
-            "j": "menu::SelectNext",
-            "d": "tab_switcher::CloseSelectedItem"
+            "ctrl-k": "tab_switcher::CloseSelectedItem"
         }
     },
     {
@@ -121,14 +119,15 @@
     {
         "context": "Terminal",
         "bindings": {
-            "ctrl-w space": "terminal::ToggleViMode",
-            "ctrl-w h": "workspace::ActivatePaneLeft",
-            "ctrl-w l": "workspace::ActivatePaneRight",
-            "ctrl-w k": "workspace::ActivatePaneUp",
-            "ctrl-w j": "workspace::ActivatePaneDown",
-            "ctrl-w v": "pane::SplitRight",
-            "ctrl-w s": "pane::SplitDown",
-            "ctrl-w a": "pane::CloseAllItems"
+            "escape escape": "terminal_panel::ToggleFocus",
+            "ctrl-b space": "terminal::ToggleViMode",
+            "ctrl-b h": "workspace::ActivatePaneLeft",
+            "ctrl-b l": "workspace::ActivatePaneRight",
+            "ctrl-b k": "workspace::ActivatePaneUp",
+            "ctrl-b j": "workspace::ActivatePaneDown",
+            "ctrl-b v": "pane::SplitRight",
+            "ctrl-b s": "pane::SplitDown",
+            "ctrl-b a": "pane::CloseAllItems"
         }
     }
 ]
