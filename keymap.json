@@ -65,12 +65,6 @@
         }
     },
     {
-        "context": "TabSwitcher",
-        "bindings": {
-            "ctrl-k": "tab_switcher::CloseSelectedItem"
-        }
-    },
-    {
         "context": "ProjectPanel",
         "bindings": {
             "space": null,
