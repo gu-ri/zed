@@ -21,6 +21,7 @@
     // General
     "context": "VimControl",
     "bindings": {
+      "space w": "workspace::Save",
       "space l": "tab_switcher::ToggleAll",
       "space e e": "workspace::ToggleLeftDock",
       "space e o": "workspace::ToggleRightDock",
