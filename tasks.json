@@ -1,44 +1,53 @@
 // Static tasks configuration.
 //
 [
-    {
-        "label": "git fetch",
-        "command": "git fetch",
-        "reveal": "no_focus",
-        "show_command": false
-    },
-    {
-        "label": "git pull",
-        "command": "git pull",
-        "reveal": "no_focus",
-        "show_command": false
-    },
-    {
-        "label": "git ll",
-        "command": "git ll",
-        "reveal_target": "center",
-        "show_command": false
-    },
-    {
-        "label": "git log --follow",
-        "command": "git log --decorate --date=format:'%Y-%m-%d %H:%M' --pretty='%C(auto)%h %d %s %Cblue %ad %an' --follow $ZED_FILE",
-        "reveal_target": "center",
-        "show_command": false
-    },
-    {
-        "label": "git lf",
-        "command": "git lf",
-        "reveal_target": "center",
-        "show_command": false
-    },
-    {
-        "label": "git copy current branch name",
-        "command": "git rev-parse --abbrev-ref HEAD | pbcopy",
-        "reveal": "never",
-        "show_command": false,
-        "show_summary": false
-    }
-    /*
+  {
+    "label": "git fetch",
+    "command": "git fetch",
+    "reveal": "no_focus",
+    "show_command": false
+  },
+  {
+    "label": "git pull",
+    "command": "git pull",
+    "reveal": "never",
+    "show_command": false
+  },
+  {
+    "label": "git ll",
+    "command": "git ll",
+    "reveal_target": "center",
+    "show_command": false
+  },
+  {
+    "label": "git log --follow",
+    "command": "git log --decorate --date=format:'%Y-%m-%d %H:%M' --pretty='%C(auto)%h %d %s %Cblue %ad %an' --follow $ZED_FILE",
+    "reveal_target": "center",
+    "show_command": false
+  },
+  {
+    "label": "git lf",
+    "command": "git lf",
+    "reveal_target": "center",
+    "show_command": false
+  },
+  {
+    "label": "git copy current branch name",
+    "command": "echo -n $(git rev-parse --abbrev-ref HEAD) | pbcopy",
+    "reveal": "never",
+    "hide": "on_success",
+    "show_command": false,
+    "show_summary": false
+  },
+  {
+    "label": "copy symbol",
+    "command": "echo -n $ZED_SYMBOL|pbcopy",
+    "reveal": "never",
+    "hide": "on_success",
+    "show_command": false,
+    "show_summary": false
+  }
+  /*
     // Example:
     {
         "label": "Example task",

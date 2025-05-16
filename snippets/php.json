@@ -1,129 +1,124 @@
 {
-    "var_dump": {
-        "prefix": "var",
-        "body": "var_dump($1);",
-        "description": "var_dump()"
-    },
-    "Debug::dump": {
-        "prefix": "dump",
-        "body": "Debug::dump($1)${0:;}",
-        "description": "Debug::dump()"
-    },
-    "Log::debug": {
-        "prefix": "log",
-        "body": "Log::debug(__FILE__.' @line: '.__LINE__.' => '.var_export($0, true));",
-        "description": "Log::debug()"
-    },
-    "Formatted Log::debug": {
-        "prefix": "logdump",
-        "body": [
-            "Log::debug(__FILE__.' @line: '.__LINE__);",
-            "ob_start();var_dump(\\$${0:data});$outputs = ob_get_clean();",
-            "foreach (explode(PHP_EOL, $outputs) as $o){ Log::debug($o); }"
-        ],
-        "description": "formatted log (multiple line)"
-    },
-    "if …": {
-        "prefix": "if",
-        "body": ["if ($1)", "{", "\t$0", "}"],
-        "description": "If block"
-    },
-    "else …": {
-        "prefix": "else",
-        "body": ["else", "{", "\t$0", "}"],
-        "description": "Else block"
-    },
-    "elseif …": {
-        "prefix": "elseif",
-        "body": ["elseif ($1)", "{", "\t$0", "}"],
-        "description": "Elseif block"
-    },
-    "for …": {
-        "prefix": "for",
-        "body": [
-            "for (\\$${1:i} = ${2:0}; \\$${1:i} < $3; \\$${1:i}++)",
-            "{ ",
-            "\t$0",
-            "}"
-        ],
-        "description": "For-loop"
-    },
-    "foreach …": {
-        "prefix": "foreach",
-        "body": ["foreach (\\$${1:vars} as \\$${2:var})", "{", "\t$0", "}"],
-        "description": "Foreach loop"
-    },
-    "Try Catch Block": {
-        "prefix": "try",
-        "body": [
-            "try",
-            "{",
-            "\t$1",
-            "}",
-            "catch (${2:\\Exception} ${3:\\$e})",
-            "{",
-            "\t$0",
-            "}"
-        ],
-        "description": "Try catch block"
-    },
-    "inline PHPDoc": {
-        "prefix": "/*",
-        "body": ["/** ${0:@var} */"],
-        "description": "inline PHPDoc"
-    },
-    "comment_simple": {
-        "prefix": "/**",
-        "body": ["/**", " * $0", " */"],
-        "description": "A simple PHP comment block for classes, including short summary, and details. Useful when you prefer to add the other documentation tags manually."
-    },
-    "php tag": {
-        "prefix": "<?php",
-        "body": "<?php $1 ?>",
-        "description": "PHP tag"
-    },
-    "echo": {
-        "prefix": "<?echo",
-        "body": "<?php echo $0; ?>",
-        "description": "<?php echo ;?>"
-    },
-    "echo with sanitizing": {
-        "prefix": "<?es",
-        "body": "<?php echo Security::htmlentities($0); ?>",
-        "description": "<?php echo Security::htmlentities(); ?>"
-    },
-    "if tag": {
-        "prefix": "<?if",
-        "body": ["<?php if ($1): ?>", "\t$0", "<?php endif; ?>"],
-        "description": "if in php tag"
-    },
-    "elseif tag": {
-        "prefix": "<?elif",
-        "body": ["<?php elseif ($1): ?>", "\t$2"],
-        "description": "elseif in php tag"
-    },
-    "else tag": {
-        "prefix": "<?else",
-        "body": ["<?php else: ?>", "\t$2"],
-        "description": "else in php tag"
-    },
-    "foreach tag": {
-        "prefix": "<?foreach",
-        "body": [
-            "<?php foreach (\\$${1:vars} as \\$${2:var}): ?>",
-            "\t$0",
-            "<?php endforeach; ?>"
-        ],
-        "description": "foreach in php tag"
-    },
-    "sql first statement": {
-        "prefix": "sql",
-        "body": "\\$sql  = '${1:SELECT} $0'.PHP_EOL;",
-        "description": "sql first sentence."
-    },
-    "sql additional statement": {
-        "prefix": ".sql",
-        "body": "\\$sql .= '$0'.PHP_EOL;",
-        "description": "sql additional sentence."
-    }
+  "var_dump": {
+    "prefix": "var",
+    "body": "var_dump($1);",
+    "description": "var_dump()"
+  },
+  "Debug::dump": {
+    "prefix": "dump",
+    "body": "Debug::dump($1)${0:;}",
+    "description": "Debug::dump()"
+  },
+  "Log::debug": {
+    "prefix": "log",
+    "body": "Log::debug(__FILE__.' @line: '.__LINE__.' => '.var_export($0, true));",
+    "description": "Log::debug()"
+  },
+  "Formatted Log::debug": {
+    "prefix": "logdump",
+    "body": [
+      "Log::debug(__FILE__.' @line: '.__LINE__);",
+      "ob_start();var_dump(\\$${0:data});$outputs = ob_get_clean();",
+      "foreach (explode(PHP_EOL, $outputs) as $o){ Log::debug($o); }"
+    ],
+    "description": "formatted log (multiple line)"
+  },
+  "if …": {
+    "prefix": "if",
+    "body": ["if ($1)", "{", "\t$0", "}"],
+    "description": "If block"
+  },
+  "else …": {
+    "prefix": "else",
+    "body": ["else", "{", "\t$0", "}"],
+    "description": "Else block"
+  },
+  "elseif …": {
+    "prefix": "elseif",
+    "body": ["elseif ($1)", "{", "\t$0", "}"],
+    "description": "Elseif block"
+  },
+  "for …": {
+    "prefix": "for",
+    "body": [
+      "for (\\$${1:i} = ${2:0}; \\$${1:i} < $3; \\$${1:i}++)",
+      "{ ",
+      "\t$0",
+      "}"
+    ],
+    "description": "For-loop"
+  },
+  "foreach …": {
+    "prefix": "foreach",
+    "body": ["foreach (\\$${1:vars} as \\$${2:var})", "{", "\t$0", "}"],
+    "description": "Foreach loop"
+  },
+  "Try Catch Block": {
+    "prefix": "try",
+    "body": [
+      "try",
+      "{",
+      "\t$1",
+      "}",
+      "catch (${2:\\Exception} ${3:\\$e})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "inline PHPDoc": {
+    "prefix": "/*",
+    "body": ["/** ${0:@var} */"],
+    "description": "inline PHPDoc"
+  },
+  "comment_simple": {
+    "prefix": "/**",
+    "body": ["/**", " * $0", " */"],
+    "description": "A simple PHP comment block for classes, including short summary, and details. Useful when you prefer to add the other documentation tags manually."
+  },
+  "php tag": {
+    "prefix": "<?php",
+    "body": "<?php $1 ?>",
+    "description": "PHP tag"
+  },
+  "echo": {
+    "prefix": "<?echo",
+    "body": "<?php echo $0; ?>",
+    "description": "<?php echo ;?>"
+  },
+  "echo with sanitizing": {
+    "prefix": "<?es",
+    "body": "<?php echo Security::htmlentities($0); ?>",
+    "description": "<?php echo Security::htmlentities(); ?>"
+  },
+  "if tag": {
+    "prefix": "<?if",
+    "body": ["<?php if ($1): ?>", "\t$0", "<?php endif; ?>"],
+    "description": "if in php tag"
+  },
+  "elseif tag": {
+    "prefix": "<?elif",
+    "body": ["<?php elseif ($1): ?>", "\t$2"],
+    "description": "elseif in php tag"
+  },
+  "else tag": {
+    "prefix": "<?else",
+    "body": ["<?php else: ?>", "\t$2"],
+    "description": "else in php tag"
+  },
+  "foreach tag": {
+    "prefix": "<?foreach",
+    "body": [
+      "<?php foreach (\\$${1:vars} as \\$${2:var}): ?>",
+      "\t$0",
+      "<?php endforeach; ?>"
+    ],
+    "description": "foreach in php tag"
+  },
+  "sql additional statement": {
+    "prefix": "sql",
+    "body": "\\$sql .= '$0'.PHP_EOL;",
+    "description": "sql additional sentence."
+  }
 }

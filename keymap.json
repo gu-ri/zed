@@ -46,6 +46,7 @@
       "ctrl-g": "go_to_line::Toggle",
       "space n c": "workspace::ClearAllNotifications",
       "space t": "task::Spawn",
+      "cmd-j": ["workspace::SendKeystrokes", "cmd-j ctrl-1"],
       // git
       "space g s": "git::Switch",
       "space g b": "git::Blame",
@@ -60,8 +61,7 @@
       "space g l l": ["task::Spawn", { "task_name": "git ll" }],
       "space g l p": ["task::Spawn", { "task_name": "git log --follow" }],
       "space g l f": ["task::Spawn", { "task_name": "git lf" }],
-      "space g o": "editor::OpenGitBlameCommit",
-      "cmd-j": ["workspace::SendKeystrokes", "cmd-j ctrl-1"]
+      "space g o": "editor::OpenGitBlameCommit"
     }
   },
   {
@@ -114,14 +114,14 @@
     "context": "Terminal",
     "bindings": {
       "escape escape": "terminal_panel::ToggleFocus",
-      "ctrl-b space": "terminal::ToggleViMode",
-      "ctrl-b h": "workspace::ActivatePaneLeft",
-      "ctrl-b l": "workspace::ActivatePaneRight",
-      "ctrl-b k": "workspace::ActivatePaneUp",
-      "ctrl-b j": "workspace::ActivatePaneDown",
-      "ctrl-b v": "pane::SplitRight",
-      "ctrl-b s": "pane::SplitDown",
-      "ctrl-b a": "pane::CloseAllItems"
+      "ctrl-w space": "terminal::ToggleViMode",
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w v": "pane::SplitRight",
+      "ctrl-w s": "pane::SplitDown",
+      "ctrl-w a": "pane::CloseAllItems"
     }
   }
 ]
