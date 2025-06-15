@@ -46,7 +46,6 @@
       "ctrl-g": "go_to_line::Toggle",
       "space n c": "workspace::ClearAllNotifications",
       "space t": "task::Spawn",
-      "cmd-j": ["workspace::SendKeystrokes", "cmd-j ctrl-1"],
       // git
       "space g s": "git::Switch",
       "space g b": "git::Blame",
