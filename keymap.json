@@ -38,6 +38,10 @@
       "space o": "projects::OpenRecent",
       "space y": "workspace::CopyRelativePath",
       "space shift-y": "workspace::CopyPath",
+      "] f": "vim::NextMethodStart",
+      "] shift-f": "vim::NextMethodEnd",
+      "[ f": "vim::PreviousMethodStart",
+      "[ shift-f": "vim::PreviousMethodEnd",
       "] c": ["workspace::SendKeystrokes", "] c z z"],
       "[ c": ["workspace::SendKeystrokes", "[ c z z"],
       "] e": "editor::MoveToStartOfNextExcerpt",
@@ -46,6 +50,7 @@
       "ctrl-g": "go_to_line::Toggle",
       "space n c": "workspace::ClearAllNotifications",
       "space t": "task::Spawn",
+      "space space": "editor::ShowCompletions",
       // git
       "space g s": "git::Switch",
       "space g b": "git::Blame",
