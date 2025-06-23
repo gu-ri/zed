@@ -51,6 +51,11 @@
       "space n c": "workspace::ClearAllNotifications",
       "space t": "task::Spawn",
       "space space": "editor::ShowCompletions",
+      "space c s": ["task::Spawn", { "task_name": "copy symbol" }],
+      "space c b": [
+        "task::Spawn",
+        { "task_name": "git copy current branch name" }
+      ],
       // git
       "space g s": "git::Switch",
       "space g b": "git::Blame",
